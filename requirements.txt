@@ -5,22 +5,22 @@
 # If you have problems running this, try the util/venv-builder.sh script.
 
 # Core with Azure dependencies
-ansible[azure]
+#
+ansible[azure]==2.8.4
+
+SecretStorage
 
 # AWS
 boto
 boto3
 
-# Digital Ocean
-packaging
-dopy==0.3.5
-
 # Google Compute Engine
-apache-libcloud>=1.17.0
+requests
+google-auth
+apache-libcloud
 
 # Linode
-pycurl
-linode-python
+linode-api4
 
 # Rackspace
 pyrax

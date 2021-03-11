@@ -30,10 +30,10 @@ Configuration d'accès IAM
                 "ec2:CreateSecurityGroup",
                 "ec2:DescribeSecurityGroups",
                 "ec2:DescribeAddresses",
-                "ec2:DescribeAlarms",
                 "ec2:DescribeImages",
                 "ec2:DescribeInstances",
                 "ec2:DescribeKeyPairs",
+                "ec2:DescribeSubnets",
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:RevokeSecurityGroupIngress",
                 "ec2:RunInstances",
@@ -47,6 +47,14 @@ Configuration d'accès IAM
             "Action": [
                 "cloudwatch:DescribeAlarms",
                 "cloudwatch:PutMetricAlarm"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMPolicies",
+            "Action": [
+                "iam:CreateServiceLinkedRole"
             ],
             "Effect": "Allow",
             "Resource": "*"

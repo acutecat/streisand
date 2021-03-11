@@ -52,9 +52,6 @@
 - name: Include run.yml
   import_playbook: run.yml
 
-- name: Include development-setup.yml
-  import_playbook: development-setup.yml
-
 # Explicity include each role to ensure all roles are tested
 - hosts: localhost
   remote_user: root
@@ -63,7 +60,6 @@
     - certificates
     - common
     - diagnostics
-    - diffie-hellman-group
     - dnsmasq
     - download-and-verify
     - ec2-security-group
@@ -74,13 +70,13 @@
     - genesis-google
     - genesis-linode
     - genesis-rackspace
+    - i18n-docs
     - ip-forwarding
-    - l2tp-ipsec
     - lets-encrypt
-    - monit
     - nginx
     - openconnect
     - openvpn
+    - service-net
     - shadowsocks
     - ssh
     - ssh-forward
